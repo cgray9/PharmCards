@@ -22,6 +22,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		3B5BBB241B82FAD2006B00E5 /* libAIBSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5BBB171B82FA93006B00E5 /* libAIBSQLite.a */; };
+		3B5BBB261B82FADF006B00E5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5BBB251B82FADF006B00E5 /* libsqlite3.dylib */; };
+		3B5BBB321B830073006B00E5 /* pharmcardsdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3B5BBB311B830050006B00E5 /* pharmcardsdb.sqlite */; };
 		3BAA091A1B77F76E000E15C8 /* libRCTCircleProgress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAA090E1B77F6AD000E15C8 /* libRCTCircleProgress.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -90,6 +93,13 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
+		3B5BBB161B82FA93006B00E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B5BBB121B82FA93006B00E5 /* AIBSQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E23D7B471ACEFE2A00C59171;
+			remoteInfo = AIBSQLite;
+		};
 		3BAA090D1B77F6AD000E15C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3BAA09071B77F6AD000E15C8 /* RCTCircleProgress.xcodeproj */;
@@ -140,6 +150,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		3B5BBB121B82FA93006B00E5 /* AIBSQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIBSQLite.xcodeproj; path = "node_modules/react-native-sqlite/AIBSQLite.xcodeproj"; sourceTree = "<group>"; };
+		3B5BBB251B82FADF006B00E5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3B5BBB311B830050006B00E5 /* pharmcardsdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = pharmcardsdb.sqlite; sourceTree = "<group>"; };
 		3BAA09071B77F6AD000E15C8 /* RCTCircleProgress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCircleProgress.xcodeproj; path = "node_modules/react-native-circle-progress/RCTCircleProgress.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -157,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5BBB261B82FADF006B00E5 /* libsqlite3.dylib in Frameworks */,
+				3B5BBB241B82FAD2006B00E5 /* libAIBSQLite.a in Frameworks */,
 				3BAA091A1B77F76E000E15C8 /* libRCTCircleProgress.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -250,6 +265,7 @@
 		13B07FAE1A68108700A75B9A /* PharmCardsProject */ = {
 			isa = PBXGroup;
 			children = (
+				3B5BBB311B830050006B00E5 /* pharmcardsdb.sqlite */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -265,6 +281,14 @@
 			isa = PBXGroup;
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B5BBB131B82FA93006B00E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B5BBB171B82FA93006B00E5 /* libAIBSQLite.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +313,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3B5BBB121B82FA93006B00E5 /* AIBSQLite.xcodeproj */,
 				3BAA09071B77F6AD000E15C8 /* RCTCircleProgress.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -315,6 +340,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				3B5BBB251B82FADF006B00E5 /* libsqlite3.dylib */,
 				13B07FAE1A68108700A75B9A /* PharmCardsProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PharmCardsProjectTests */,
@@ -398,6 +424,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 3B5BBB131B82FA93006B00E5 /* Products */;
+					ProjectRef = 3B5BBB121B82FA93006B00E5 /* AIBSQLite.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -508,6 +538,13 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3B5BBB171B82FA93006B00E5 /* libAIBSQLite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAIBSQLite.a;
+			remoteRef = 3B5BBB161B82FA93006B00E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3BAA090E1B77F6AD000E15C8 /* libRCTCircleProgress.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -552,6 +589,7 @@
 			files = (
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3B5BBB321B830073006B00E5 /* pharmcardsdb.sqlite in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
