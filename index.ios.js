@@ -25,7 +25,7 @@ var PharmCardsProject = React.createClass({
                     style={styles.container}
                     initialRoute={{
                         component: DeckList,
-                        title: 'bugs & drugs'
+                        title: 'Pharm Cards'
                     }}
                 />
         );
