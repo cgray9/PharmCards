@@ -63,8 +63,7 @@ var DeckList =  React.createClass({
         return(
             <DeckButton
                 deck={deck}
-                navigator = {this.props.navigator}
-            />
+                navigator = {this.props.navigator}/>
         )
     },
 
@@ -75,12 +74,14 @@ var DeckList =  React.createClass({
                     <MasteredProgress format='circle' progress={0.67}/>
                     <Text style={styles.masteredText}>Mastered</Text>
                 </View>
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={this.renderDeck}
-                    contentContainerStyle={styles.list}
-                    automaticallyAdjustContentInsets={false}
-                />
+                <View style={styles.list}>
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={this.renderDeck}
+                        automaticallyAdjustContentInsets={false}
+                        contentContainerStyle={styles.listView}
+                        />
+                </View>
             </View>
         );
     }
@@ -89,11 +90,14 @@ var DeckList =  React.createClass({
 var styles = StyleSheet.create({
     list: {
         flex: 1,
+        backgroundColor: '#673AB7'
+    },
+
+    listView: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         padding: 10,
         justifyContent: 'center',
-        backgroundColor: '#673AB7'
     },
 
     container: {
