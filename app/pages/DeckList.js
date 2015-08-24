@@ -11,12 +11,9 @@ var {
     View
 } = React;
 
-var MOCKED_DECK_DATA = [
-  {name: "Neuro"},
-  {name: "MSK"},
-  {name: "Heme"},
-  {name: "Biochem"}
-];
+var SQLite = require('react-native-sqlite');
+
+var database = SQLite.open("pharmcardsdb.sqlite");
 
 var DeckList =  React.createClass({
     getInitialState: function() {
@@ -27,14 +24,29 @@ var DeckList =  React.createClass({
     },
 
     componentDidMount: function() {
-        this.fetchData();
+        this.fetchDecks();
     },
 
-    fetchData: function() {
-        this.setState({
-            dataSource: this.state.dataSource.cloneWithRows(MOCKED_DECK_DATA),
-            loaded: true,
-        });
+    fetchDecks: function() {
+        var decks = []
+        database.executeSQL(
+            "SELECT * FROM deck ORDER BY name ASC",
+            [],
+            (row) => {
+                console.log("row: " + row);
+                decks.push(row);
+            },
+            (error) => {
+                if (error) {
+                    throw error;
+                } else {
+                    this.setState({
+                        dataSource: this.state.dataSource.cloneWithRows(decks),
+                        loaded: true,
+                    });
+                }
+            }
+        )
     },
 
     openDeck: function(deck) {
